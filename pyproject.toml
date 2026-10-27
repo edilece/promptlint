@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "edilece-promptlint"
+version = "0.1.0"
+description = "检查命名、长度、结构与措辞是否合规，标出违规位置"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "edilece" }]
+keywords = ["llm", "cli", "analysis", "observability"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://edilece.github.io"
+Repository = "https://github.com/edilece/promptlint"
+Issues = "https://github.com/edilece/promptlint/issues"
+
+[project.scripts]
+promptlint = "promptlint:main"
+
+[tool.setuptools]
+py-modules = ["promptlint"]
